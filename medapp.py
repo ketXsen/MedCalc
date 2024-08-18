@@ -12,6 +12,8 @@ if st.button("SickByPercent - Du velger sykemeldingsprosenten, og får antall da
     st.switch_page("pages/SickByPercent.py")
 if st.button("RateCounter - Du kan beregne antall tidstakster."):
     st.switch_page("pages/RateCounter.py")
+if st.button("DayCounter - Legger til x antall dager og gir en ny dato."):
+    st.switch_page("pages/DayCounter.py")    
 
 
 col1, col2 = st.columns((1,1))
