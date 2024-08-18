@@ -29,7 +29,7 @@ col1, col2 = st.columns((1,1))
 
 with col1:
 
-    st.title("Sykemeldes med utgangspunkti i prosent:")
+    st.header("Sykemeldes med utgangspunkti i prosent:")
 
     SickLeavePercentage = 25.0
 
@@ -44,7 +44,7 @@ with col1:
 
 with col2:
 
-    st.title("Sykemeldes med utgangspunkti i dager:")
+    st.header("Sykemeldes med utgangspunkti i dager:")
 
 
     OnsketDagerSykPrUke = 0.0
