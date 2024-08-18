@@ -9,10 +9,16 @@ def validateStrAsTime(str):
     st.write(ret)
 
 
+if st.button("Hovedmeny - Tilbake til MedCalc menyen."):
+    st.switch_page("MedCalc.py")
 
-StarttimeS = st.text_input("Når startet du?","12:00")
+conRateCounter = st.container(border=True)
+
+conRateCounter.subheader("Teller antall tidstakster:")
+
+StarttimeS = conRateCounter.text_input("Når startet du?","12:00")
 validateStrAsTime(StarttimeS)
-EndtimeS = st.text_input("Når var du ferdig?","12:00")
+EndtimeS = conRateCounter.text_input("Når var du ferdig?","12:00")
 validateStrAsTime(EndtimeS)
 
 Starttime = datetime.strptime(StarttimeS, "%H:%M").time()
@@ -28,7 +34,7 @@ minWork = ((Endtime.hour*60)+Endtime.minute) -((Starttime.hour*60)+Starttime.min
 if Endtime < Starttime:
     minWork += (60*24)
 
-st.write(f"Du har jobbet i {minWork} minutter.")
+conRateCounter.write(f"Du har jobbet i {minWork} minutter.")
 
 rateCount = 1
 minWork -=minCountFirst
@@ -40,4 +46,4 @@ while minWork > -1:
 
 rateCount -= 1
 
-st.write(f"Du får {rateCount} tidstakst(er). Du mangler {minWork*-1} minutt(er) for å få en til")
+conRateCounter.write(f"Du får {rateCount} tidstakst(er). Du mangler {minWork*-1} minutt(er) for å få en til")
