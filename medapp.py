@@ -3,8 +3,15 @@ import pandas as pd
 
 st.set_page_config(layout="wide")
 
+with st.sidebar:
+    st.title("MedApp")
+    st.button("Sykemelding med utgangspunkti i prosent")
+    st.link_button("Ta en titt på vg","https://www.vg.no")
 
-st.title("MedApp")
+  
+
+
+
 
 FullTimeHours = 37.5
 WorkHoursPrDay = 7.5
@@ -15,7 +22,7 @@ FullTimeHours= st.number_input("Antall timer fulltid i uken",0.0,100.0,FullTimeH
 VacancyRate = 80.0
 
 
-VacancyRate = st.number_input("Hilken stillingsprosent har vedkommene:",0.0,100.0,VacancyRate)
+VacancyRate = st.number_input("Hilken stillingsprosent har vedkommende:",0.0,100.0,VacancyRate)
 
 WorkingHoursPrWeek = round(FullTimeHours*VacancyRate/100,1)
 
