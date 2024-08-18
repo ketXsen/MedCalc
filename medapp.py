@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(layout="wide")
+
+
 st.title("MedApp")
 
 FullTimeHours = 37.5
@@ -18,21 +21,36 @@ WorkingHoursPrWeek = round(FullTimeHours*VacancyRate/100,1)
 
 st.write(f"Personen jobber {WorkingHoursPrWeek} timer i uken")
 
-SickLeavePercentage = 25.0
-
-SickLeavePercentage = st.number_input("Hilken sykemeldingsprosent vurderes:",0.0,100.0,SickLeavePercentage)
-
-SickLeaveHours = round(SickLeavePercentage*WorkingHoursPrWeek/100,1)
-SickLeaveDays = round(SickLeaveHours/WorkHoursPrDay,1)
 
 
-st.write(f"Personen sykemeldes {SickLeaveHours} timer pr uke")
-st.write(f"Personen sykemeldes {SickLeaveDays} dager pr uke")
 
-OnsketDagerSykPrUke = 0.0
+col1, col2 = st.columns((1,1))
 
-OnsketDagerSykPrUke = st.number_input("Hvor mange dager syk vurderes:",0.0,100.0,OnsketDagerSykPrUke)
 
-SickLeavePercentage = round((OnsketDagerSykPrUke*WorkHoursPrDay)/WorkingHoursPrWeek)*100
+with col1:
 
-st.write(f"Dersom man ønsker {OnsketDagerSykPrUke} sykedager pr uke, blir sykeprosenten {SickLeavePercentage}%")
+    st.write("Sykemeldes med utgangspunkti i prosent:")
+
+    SickLeavePercentage = 25.0
+
+    SickLeavePercentage = st.number_input("Hilken sykemeldingsprosent vurderes:",0.0,100.0,SickLeavePercentage)
+
+    SickLeaveHours = round(SickLeavePercentage*WorkingHoursPrWeek/100,1)
+    SickLeaveDays = round(SickLeaveHours/WorkHoursPrDay,1)
+
+
+    st.write(f"Personen sykemeldes {SickLeaveHours} timer pr uke")
+    st.write(f"Personen sykemeldes {SickLeaveDays} dager pr uke")
+
+with col2:
+
+    st.write("Sykemeldes med utgangspunkti i dager:")
+
+
+    OnsketDagerSykPrUke = 0.0
+
+    OnsketDagerSykPrUke = st.number_input("Hvor mange dager syk vurderes:",0.0,100.0,OnsketDagerSykPrUke)
+
+    SickLeavePercentage = round((OnsketDagerSykPrUke*WorkHoursPrDay)/WorkingHoursPrWeek)*100
+
+    st.write(f"Dersom man ønsker {OnsketDagerSykPrUke} sykedager pr uke, blir sykeprosenten {SickLeavePercentage}%")
