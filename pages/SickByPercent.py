@@ -27,4 +27,4 @@ SickLeaveHours = round(SickLeavePercentage*WorkingHoursPrWeek/100,1)
 SickLeaveDays = round(SickLeaveHours/WorkHoursPrDay,1)
 
 
-st.subheader(f"Dersom man ønsker {SickLeavePercentage}% sykemelsing og jobber {VacancyRate}% stilling, så utgjør det {SickLeaveHours} timer eller {SickLeaveDays} dag(er) pr. uke.")
+st.subheader(f"Dersom man ønsker {SickLeavePercentage}% sykemelding og jobber {VacancyRate}% stilling, så utgjør det {SickLeaveHours} timer eller {SickLeaveDays} dag(er) pr. uke.")
