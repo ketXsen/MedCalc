@@ -9,10 +9,6 @@ st.subheader("Velg i menyen")
 
 if st.button("SickByDaysAndPercent - Du velger antall dager personen er syk og får ut sykemeldingsprosenten, eller omvendt."):
     st.switch_page("pages/SickByDaysAndPercent.py")
-#if st.button("SickByDays - Du velger antall dager personen er syk, og får ut sykemeldingsprosenten."):
-#    st.switch_page("pages/SickByDays.py")
-#if st.button("SickByPercent - Du velger sykemeldingsprosenten, og får antall dager personen er syk."):
-#    st.switch_page("pages/SickByPercent.py")
 if st.button("RateCounter - Du kan beregne antall tidstakster."):
     st.switch_page("pages/RateCounter.py")
 if st.button("DayCounter - Legger til x antall dager og gir en ny dato."):
