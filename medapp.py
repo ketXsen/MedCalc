@@ -5,8 +5,8 @@ st.set_page_config(layout="wide")
 
 with st.sidebar:
     st.title("MedApp")
-    st.button("Sykemelding med utgangspunkti i prosent")
-    st.link_button("Ta en titt på vg","https://www.vg.no")
+    #st.button("Sykemelding med utgangspunkti i prosent")
+    #st.link_button("Ta en titt på vg","https://www.vg.no")
 
   
 
