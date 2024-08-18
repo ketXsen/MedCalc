@@ -58,6 +58,6 @@ with col2:
 
     OnsketDagerSykPrUke = st.number_input("Hvor mange dager syk vurderes:",0.0,100.0,OnsketDagerSykPrUke)
 
-    SickLeavePercentage = round((OnsketDagerSykPrUke*WorkHoursPrDay)/WorkingHoursPrWeek)*100
+    SickLeavePercentage = round(((OnsketDagerSykPrUke*WorkHoursPrDay)/WorkingHoursPrWeek)*100,1)
 
     st.subheader(f"Dersom man ønsker {OnsketDagerSykPrUke} sykedager pr uke, blir sykeprosenten {SickLeavePercentage}%")
