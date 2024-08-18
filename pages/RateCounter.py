@@ -1,12 +1,20 @@
 import streamlit as st
 import pandas as pd    
 from datetime import datetime
+import re
 
 def validateStrAsTime(str):
     ret = ""
-    if len(str) < 5 or len(str) > 5:
+
+    reg = r"^(?:[01]\d|2[0-3])(?:[0-5]\d)$|^(?:[01]\d|2[0-3])[:.,][0-5]\d$"
+    
+       
+    if bool(re.match(reg, str)):
+        str = str[0]+str[1]+":"+str[len(str)-2]+str[len(str)-1]
+    else:
         ret = "tiden må være HH:MM"
     st.write(ret)
+    return str
 
 
 if st.button("Hovedmeny - Tilbake til MedCalc menyen."):
@@ -14,19 +22,31 @@ if st.button("Hovedmeny - Tilbake til MedCalc menyen."):
 
 conRateCounter = st.container(border=True)
 
+
 conRateCounter.subheader("Teller antall tidstakster:")
 
+RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Overgrepsmottaket", "Sykebesøk"))
+
+if RateType == "Overgrepsmottaket":
+    minCountFirst = 20
+    minCountRest = 15
+elif RateType == "Sykebesøk":
+    minCountFirst = 30
+    minCountRest = 30
+else:
+    conRateCounter.write("Ukjent tidstype")
+
+
+
 StarttimeS = conRateCounter.text_input("Når startet du?","12:00")
-validateStrAsTime(StarttimeS)
+StarttimeS = validateStrAsTime(StarttimeS)
 EndtimeS = conRateCounter.text_input("Når var du ferdig?","12:00")
-validateStrAsTime(EndtimeS)
+EndtimeS = validateStrAsTime(EndtimeS)
 
 Starttime = datetime.strptime(StarttimeS, "%H:%M").time()
 Endtime = datetime.strptime(EndtimeS, "%H:%M").time()
 
 
-minCountFirst = 20
-minCountRest = 15
 
 
 minWork = ((Endtime.hour*60)+Endtime.minute) -((Starttime.hour*60)+Starttime.minute)
