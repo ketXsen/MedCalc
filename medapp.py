@@ -29,7 +29,7 @@ col1, col2 = st.columns((1,1))
 
 with col1:
 
-    st.write("Sykemeldes med utgangspunkti i prosent:")
+    st.title("Sykemeldes med utgangspunkti i prosent:")
 
     SickLeavePercentage = 25.0
 
@@ -39,12 +39,12 @@ with col1:
     SickLeaveDays = round(SickLeaveHours/WorkHoursPrDay,1)
 
 
-    st.write(f"Personen sykemeldes {SickLeaveHours} timer pr uke")
-    st.write(f"Personen sykemeldes {SickLeaveDays} dager pr uke")
+    st.subheader(f"Personen sykemeldes {SickLeaveHours} timer pr uke")
+    st.subheader(f"Personen sykemeldes {SickLeaveDays} dager pr uke")
 
 with col2:
 
-    st.write("Sykemeldes med utgangspunkti i dager:")
+    st.title("Sykemeldes med utgangspunkti i dager:")
 
 
     OnsketDagerSykPrUke = 0.0
@@ -53,4 +53,4 @@ with col2:
 
     SickLeavePercentage = round((OnsketDagerSykPrUke*WorkHoursPrDay)/WorkingHoursPrWeek)*100
 
-    st.write(f"Dersom man ønsker {OnsketDagerSykPrUke} sykedager pr uke, blir sykeprosenten {SickLeavePercentage}%")
+    st.subheader(f"Dersom man ønsker {OnsketDagerSykPrUke} sykedager pr uke, blir sykeprosenten {SickLeavePercentage}%")
