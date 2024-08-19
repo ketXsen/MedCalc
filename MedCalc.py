@@ -7,11 +7,11 @@ st.set_page_config(layout="wide")
 st.subheader("Velg i menyen")
 
 
-if st.button("Beregne sykemeldingsprosent - Du velger antall dager personen er syk og får ut sykemeldingsprosenten, eller omvendt"):
+if st.button("Beregne sykemeldingsgrad hos deltidsansatt"):
     st.switch_page("pages/SickByDaysAndPercent.py")
-if st.button("Beregne antall tidstakster - Du kan beregne antall tidstakster"):
+if st.button("Beregne antall tidstakster"):
     st.switch_page("pages/RateCounter.py")
-if st.button("Beregne antall dager til neste resept - Legger til x antall dager og gir en ny dato"):
+if st.button("Beregne antall dager til neste resept"):
     st.switch_page("pages/DayCounter.py")    
 
 
