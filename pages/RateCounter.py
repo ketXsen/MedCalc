@@ -30,9 +30,11 @@ RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Overgrepsmottak
 if RateType == "Overgrepsmottaket":
     minCountFirst = 21
     minCountRest = 15
+    conRateCounter.write(f"Beregningen gir første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
 elif RateType == "Sykebesøk":
     minCountFirst = 31
     minCountRest = 15
+    conRateCounter.write(f"Beregningen gir første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
 else:
     conRateCounter.write("Ukjent tidstype")
 
