@@ -27,7 +27,7 @@ conSickByDay = st.container(border=True)
   
 conSickByDay.subheader("Hvor mange prosent sykmelding utgjør X antall dager?")
 
-OnsketDagerSykPrUke = 0.0
+OnsketDagerSykPrUke = 1.0
 
 OnsketDagerSykPrUke = conSickByDay.number_input("Hvor mange dager syk vurderes:",0.0,100.0,OnsketDagerSykPrUke,format="%0.1f")
 
