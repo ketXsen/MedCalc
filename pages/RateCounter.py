@@ -62,7 +62,7 @@ minWork = ((Endtime.hour*60)+Endtime.minute) -((Starttime.hour*60)+Starttime.min
 if Endtime < Starttime:
     minWork += (60*24)
 
-conRateCounter.write(f"{infoText3] {minWork} minutter.")
+conRateCounter.write(f"{infoText3} {minWork} minutter.")
 
 rateCount = 1
 minWork -=minCountFirst
