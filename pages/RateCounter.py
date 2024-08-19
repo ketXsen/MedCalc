@@ -32,12 +32,14 @@ if RateType == "Konsultasjon":
     minCountRest = 15
     infoText1 = "Når startet konsultasjonen?"
     infoText2 = "Når sluttet konsultasjonen?"
+    infoText3 = "Konsultasjonen har vart i"
     #conRateCounter.write(f"Første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
 elif RateType == "Sykebesøk":
     minCountFirst = 31
     minCountRest = 15
     infoText1 = "Når dro du?"
     infoText2 = "Når var du tilbake?"
+    infoText3 = "Sykebesøket har vart i"
     #conRateCounter.write(f"Første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
 else:
     conRateCounter.write("Ukjent tidstype")
@@ -60,7 +62,7 @@ minWork = ((Endtime.hour*60)+Endtime.minute) -((Starttime.hour*60)+Starttime.min
 if Endtime < Starttime:
     minWork += (60*24)
 
-conRateCounter.write(f"Du har jobbet i {minWork} minutter.")
+conRateCounter.write(f"{infoText3] {minWork} minutter.")
 
 rateCount = 1
 minWork -=minCountFirst
