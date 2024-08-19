@@ -25,9 +25,9 @@ conRateCounter = st.container(border=True)
 
 conRateCounter.subheader("Teller antall tidstakster:")
 
-RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Overgrepsmottaket", "Sykebesøk"))
+RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Konsultasjon", "Sykebesøk"))
 
-if RateType == "Overgrepsmottaket":
+if RateType == "Konsultasjon":
     minCountFirst = 21
     minCountRest = 15
     #conRateCounter.write(f"Første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
