@@ -36,8 +36,8 @@ if RateType == "Konsultasjon":
 elif RateType == "Sykebesøk":
     minCountFirst = 31
     minCountRest = 15
-    infoText1 = "Når dro du til sykebesøket?"
-    infoText2 = "Når var du tilbake fra sykebesøket?"
+    infoText1 = "Når dro du?"
+    infoText2 = "Når var du tilbake?"
     #conRateCounter.write(f"Første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
 else:
     conRateCounter.write("Ukjent tidstype")
