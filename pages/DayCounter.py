@@ -19,4 +19,4 @@ EndDate = StartDate + timedelta(days=dayCount)
 StartDateF = StartDate.strftime("%d. %b %y")
 EndDateF = EndDate.strftime("%d. %b %y")
 
-conDayCounter.write(f"{dayCount} dager fra {StartDateF} blir {EndDateF}.") 
+conDayCounter.write(f"{StartDateF} -{EndDateF}: {dayCount} dag(er).") 
