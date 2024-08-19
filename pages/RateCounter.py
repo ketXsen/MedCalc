@@ -32,7 +32,7 @@ if RateType == "Overgrepsmottaket":
     minCountRest = 15
 elif RateType == "Sykebesøk":
     minCountFirst = 30
-    minCountRest = 30
+    minCountRest = 15
 else:
     conRateCounter.write("Ukjent tidstype")
 
