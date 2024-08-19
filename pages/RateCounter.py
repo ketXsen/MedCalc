@@ -30,19 +30,23 @@ RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Konsultasjon", 
 if RateType == "Konsultasjon":
     minCountFirst = 21
     minCountRest = 15
+    infoText1 = "Når startet konsultasjonen?"
+    infoText2 = "Når sluttet konsultasjonen?"
     #conRateCounter.write(f"Første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
 elif RateType == "Sykebesøk":
     minCountFirst = 31
     minCountRest = 15
+    infoText1 = "Når dro du til sykebesøket?"
+    infoText2 = "Når var du tilbake fra sykebesøket?"
     #conRateCounter.write(f"Første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
 else:
     conRateCounter.write("Ukjent tidstype")
 
 
 
-StarttimeS = conRateCounter.text_input("Når startet du?","12:00")
+StarttimeS = conRateCounter.text_input(infoText1,"12:00")
 StarttimeS = validateStrAsTime(StarttimeS)
-EndtimeS = conRateCounter.text_input("Når var du ferdig?","12:00")
+EndtimeS = conRateCounter.text_input(infoText2,"12:00")
 EndtimeS = validateStrAsTime(EndtimeS)
 
 Starttime = datetime.strptime(StarttimeS, "%H:%M").time()
