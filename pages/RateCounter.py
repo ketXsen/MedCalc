@@ -23,7 +23,7 @@ if st.button("Hovedmeny - Tilbake til MedCalc menyen."):
 conRateCounter = st.container(border=True)
 
 
-conRateCounter.subheader("Teller antall tidstakster:")
+conRateCounter.subheader("Beregne antall tidstakster")
 
 RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Konsultasjon", "Sykebesøk"))
 
@@ -74,4 +74,4 @@ while minWork > -1:
 
 rateCount -= 1
 
-conRateCounter.write(f"Du får {rateCount} tidstakst(er). Du mangler {minWork*-1} minutt(er) for å få en til")
+conRateCounter.write(f"Du får {rateCount} tidstakst(er). Du mangler {minWork*-1} minutt(er) for å få en til.")
