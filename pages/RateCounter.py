@@ -28,10 +28,10 @@ conRateCounter.subheader("Teller antall tidstakster:")
 RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Overgrepsmottaket", "Sykebesøk"))
 
 if RateType == "Overgrepsmottaket":
-    minCountFirst = 20
+    minCountFirst = 21
     minCountRest = 15
 elif RateType == "Sykebesøk":
-    minCountFirst = 30
+    minCountFirst = 31
     minCountRest = 15
 else:
     conRateCounter.write("Ukjent tidstype")
