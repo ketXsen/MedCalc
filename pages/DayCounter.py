@@ -6,7 +6,7 @@ if st.button("Hovedmeny - Tilbake til MedCalc menyen."):
     st.switch_page("MedCalc.py")
     
 conDayCounter = st.container(border=True)
-conDayCounter.subheader("Finner dato # dager frem:")
+conDayCounter.subheader("Beregne antall dager til neste resept")
 
 StartDate = conDayCounter.date_input("Fra og med hvilken dato?",datetime.now())
 
