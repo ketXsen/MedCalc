@@ -11,7 +11,7 @@ conDayCounter.subheader("Beregne antall dager til neste resept")
 StartDate = conDayCounter.date_input("Fra og med hvilken dato?",datetime.now())
 
 dayCount = 28
-dayCount= conDayCounter.number_input("Hvor mange dager har du skrevet ut for?",1,dayCount)
+dayCount= conDayCounter.number_input("Hvor mange dager har du skrevet ut for?",1,None,dayCount)
 
 EndDate = StartDate + timedelta(days=dayCount)
 
