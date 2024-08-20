@@ -1,6 +1,3 @@
-# DayCounter.py
-# sidebar_name: Beregne
-
 import streamlit as st
 import pandas as pd    
 from datetime import datetime,timedelta
@@ -14,7 +11,7 @@ conDayCounter.subheader("Beregne antall dager til neste resept")
 StartDate = conDayCounter.date_input("Fra og med hvilken dato?",datetime.now())
 
 dayCount = 28
-dayCount= conDayCounter.number_input("Hvor mange dager har du skrevet ut for?",dayCount)
+dayCount= conDayCounter.number_input("Hvor mange dager har du skrevet ut for?",1,dayCount)
 
 EndDate = StartDate + timedelta(days=dayCount)
 
