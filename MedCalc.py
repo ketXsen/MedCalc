@@ -15,6 +15,8 @@ if st.button("Beregne antall dager til neste resept"):
     st.switch_page("pages/DayCounter.py")    
 
 
+
+
 # col1, col2 = st.columns((1,1))
 
 
