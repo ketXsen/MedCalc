@@ -15,6 +15,10 @@ if st.button("Beregne antall dager til neste resept"):
     st.switch_page("pages/DayCounter.py")    
 if st.button("Beregne antall dager mellom to datoer"):
     st.switch_page("pages/DaysBetween.py")    
+if st.button("Beregne BMI"):
+    st.switch_page("pages/Bmi.py")    
+#if st.button("Beregne relativ fettprosent"):
+#    st.switch_page("pages/BodyFatPercentage.py")    
 
 
 
