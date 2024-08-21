@@ -13,7 +13,8 @@ if st.button("Beregne antall tidstakster"):
     st.switch_page("pages/RateCounter.py")
 if st.button("Beregne antall dager til neste resept"):
     st.switch_page("pages/DayCounter.py")    
-
+if st.button("Beregne antall dager mellom to datoer"):
+    st.switch_page("pages/DaysBetween.py")    
 
 
 

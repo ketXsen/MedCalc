@@ -20,3 +20,6 @@ StartDateF = StartDate.strftime("%d. %b %y")
 EndDateF = EndDate.strftime("%d. %b %y")
 
 conDayCounter.write(f"Neste resept tidligst {EndDateF.lower()}.") 
+
+
+
