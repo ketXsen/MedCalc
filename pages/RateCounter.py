@@ -81,4 +81,12 @@ while minWork > -1:
 
 rateCount -= 1
 
-conRateCounter.write(f"Du får {rateCount} tidstakst(er). Du mangler {minWork*-1} minutt(er) for å få en til.")
+rateTextEnding = ""
+if rateCount > 1:
+    rateTextEnding = "(er)"
+
+minuteTextEnding = ""
+if minWork > 1:
+    minuteTextEnding = "(er)"
+
+conRateCounter.write(f"Du får {rateCount} tidstakst{rateTextEnding}. Du mangler {minWork*-1} minutt{minuteTextEnding} for å få en til.")
