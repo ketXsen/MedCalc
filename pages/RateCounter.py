@@ -25,7 +25,7 @@ conRateCounter = st.container(border=True)
 
 conRateCounter.subheader("Beregne antall tidstakster")
 
-RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Konsultasjon", "Sykebesøk"))
+RateType = conRateCounter.selectbox("Hvilken type tidstakst:", ("Konsultasjon", "Sykebesøk", "Samarbeidsmøte"))
 
 if RateType == "Konsultasjon":
     minCountFirst = 21
@@ -39,7 +39,14 @@ elif RateType == "Sykebesøk":
     minCountRest = 15
     infoText1 = "Når dro du?"
     infoText2 = "Når var du tilbake?"
-    infoText3 = "Sykebesøket har vart i"
+    infoText3 = "Sykebesøket inkl reise har vart i"
+    #conRateCounter.write(f"Første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
+elif RateType == "Samarbeidsmøte":
+    minCountFirst = 1
+    minCountRest = 30
+    infoText1 = "Når dro du?"
+    infoText2 = "Når var du tilbake?"
+    infoText3 = "Samarbeidsmøte inkl reise har vart i"
     #conRateCounter.write(f"Første takst etter {minCountFirst} minutter, og så en for hver påbegynte {minCountRest} minutter")
 else:
     conRateCounter.write("Ukjent tidstype")
