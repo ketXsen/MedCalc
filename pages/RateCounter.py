@@ -83,10 +83,10 @@ rateCount -= 1
 
 rateTextEnding = ""
 if rateCount > 1:
-    rateTextEnding = "(er)"
+    rateTextEnding = "er"
 
 minuteTextEnding = ""
-if minWork > 1:
-    minuteTextEnding = "(er)"
+if (minWork*-1) > 1:
+    minuteTextEnding = "er"
 
 conRateCounter.write(f"Du får {rateCount} tidstakst{rateTextEnding}. Du mangler {minWork*-1} minutt{minuteTextEnding} for å få en til.")
