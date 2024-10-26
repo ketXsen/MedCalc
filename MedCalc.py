@@ -1,36 +1,6 @@
 import streamlit as st
-import pandas as pd
-
-#st.set_page_config(layout="wide")
 
 
-st.subheader("Velg i menyen")
+st.write("MedCalc er flyttet til http://medcalc.mrkaizer.com/")
 
-
-if st.button("Beregne sykemeldingsgrad hos deltidsansatt"):
-    st.switch_page("pages/SickByDaysAndPercent.py")
-if st.button("Beregne antall tidstakster"):
-    st.switch_page("pages/RateCounter.py")
-if st.button("Beregne antall dager til neste resept"):
-    st.switch_page("pages/DayCounter.py")    
-if st.button("Beregne antall dager mellom to datoer"):
-    st.switch_page("pages/DaysBetween.py")    
-if st.button("Beregne BMI"):
-    st.switch_page("pages/Bmi.py")    
-#if st.button("Beregne relativ fettprosent"):
-#    st.switch_page("pages/BodyFatPercentage.py")    
-
-
-
-# col1, col2 = st.columns((1,1))
-
-
-# with col1:
-    
-#     st.write(f"")
-    
-
-# with col2:
-
-#     st.write(f"")
-
+st.page_link("http://medcalc.mrkaizer.com/", label="http://medcalc.mrkaizer.com/", icon="🔼")
